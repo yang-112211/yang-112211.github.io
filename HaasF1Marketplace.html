@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<style>
+body { 
+    font-family: Helvetica, sans-serif;
+    margin-left: 5%;
+    margin-right:5%;
+    z-index: 10;
+}
+
+.background {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: -1;
+}
+
+/* The sidebar menu */
+.sidenav {
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 20%; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #e6002d; /* Black */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 0px;
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px 8px 8px 16px;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  color: #f1f1f1;
+  display: block;
+  z-index: 2;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  background-color: #ff8888;
+}
+
+#nohover {
+    background-color: #e6002d;
+}
+
+.sidenav label {
+  padding: 8px 8px 8px 16px;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  color: #f1f1f1;
+  display: block;
+  z-index: 2;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav label:hover {
+  background-color: #ff8888;
+}
+
+#nohover {
+    background-color: #e6002d;
+}
+
+/* Style page content */
+.main {
+  margin-left: 20%; /* Same as the width of the sidebar */
+  position: absolute;
+  top: 0;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+
+.float-container {
+    padding: 5px;
+    margin-bottom: 30px;
+    margin-top: -10px;
+}
+
+.float-child {
+    float: left;
+    margin: 0% 1% 0% 1%;
+}
+    </style>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+    </script>
+</head>
+<body> 
+<div class="sidenav">
+  <a id="nohover" href="./HaasF1.html" style="margin: 10px 0px 0px -6px;">
+    <img src="HaasLogo.svg" style="width: 94%; height: auto; border: 5px solid white; border-radius: 5px; margin: 0px 0px 3% 2%; background-color: #fff;">
+</a>
+  <a href="./HaasF1.html"><img src="Home.png"  style="padding-right: 10px; width: 14%;"> Home</a>
+  <a href="./HaasF1Chat.html"><img src="Chat.png"  style="padding-right: 10px; width: 14%;"> Chat</a>
+  <a href="./HaasF1Marketplace.html"><img src="Marketplace.png"  style="padding-right: 10px; width: 14%;"> AI Marketplace</a>
+  <a href=""><img src="Notifications.png"  style="padding-right: 10px; width: 14%;"> Notifications Hub</a>
+  <a href=""><img src="About.png"  style="padding-right: 10px; width: 14%;"> About Haasistant</a>
+  <a href=""><img src="Guides&Guidelines.png"  style="padding-right: 10px; width: 14%;"> Guidance & Guidelines</a>
+  <a href=""><img src="Feedback.png"  style="padding-right: 10px; width: 14%;"> Feedback</a>
+</div>
+
+
+<div class="main" style="width: 80%; background-color: #111111; height: 100%; z-index: -2;">
+  <div>
+    <img class="background" src="Banner.png" style="width: 100%; height: 80px;"><h1 style="color: #f1f1f1; font-weight: 500; font-size: 50px; padding: 10px 10px 0px 20px;">Haas F1 AI Market Place</h1>
+  </div>
+  <div style="background-color: #222222; padding: 18px 15px 15px 15px;">
+    <div class="float-container">
+      <div class="float-child" style="width: 25%;">
+        <form>
+          <input type="search" placeholder="Search" aria-label="Search" style="background-color: #1a1a1a; border: 1px solid #d1d1d1; border-radius: 2px; padding: 5px;">
+        </form>
+      </div>
+      <div class="float-child">
+        <select name="cars" id="cars" style="padding: 5px 10px 5px 5px; color: #f1f1f1; background-color: #1a1a1a; border: 1px solid #d1d1d1; border-radius: 2px;">
+          <option value="All">Area: All</option>
+        </select>
+      </div>
+      <div class="float-child">
+        <select name="cars" id="cars" style="padding: 5px 10px 5px 5px; color: #f1f1f1; background-color: #1a1a1a; border: 1px solid #d1d1d1; border-radius: 2px;">
+          <option value="All">Service Line: All</option>
+        </select>
+      </div>
+      <div class="float-child">
+        <select name="cars" id="cars" style="padding: 5px 10px 5px 5px; color: #f1f1f1; background-color: #1a1a1a; border: 1px solid #d1d1d1; border-radius: 2px;">
+          <option value="All">Status: All</option>
+        </select>
+      </div>
+      <div class="float-child">
+        <div style="padding: 5px 10px 5px 5px; color: #f1f1f1; background-color: #1a1a1a; border: 1px solid #d1d1d1; border-radius: 2px;">
+          <option value="All">More Filters +</option>
+        </div>
+      </div>
+  </div>
+  </div>
+  <div style="background-color: #111; padding: 18px 15px 15px 15px;" style="height: 100%;">
+    <div class="float-container" style="height: 100%;">
+      <a href="./HaasF1HR.html">
+        <div class="float-child" style="padding: 5px 10px 5px 5px; color: #f1f1f1; background-color: #222; border: 1px solid #d1d1d1; border-radius: 4px; height: 300px;">
+          <div class="float-container" style="width: 270px; padding: 15px 0px 0px 5px; height: 50px;">
+            <div class="float-child" style="width: 50px; padding-top: 3px;">
+              <img src="./HR.png" style="width: 100%;">
+            </div>
+            <div class="float-child" style="width: 150px; font-weight: 500; font-size: 20px; padding-left: 10px;">
+              <p>HR Virtual Assistant</p>
+            </div>
+          </div>
+          <div style="padding-top: 20px; margin-left: 5px;">
+            <p style="width: 270px; padding: 20px 10px 20px 10px; background-color: #505050; border-radius: 5px;">
+              Utilising Microsoft Copilot Studio, we have developed an HR Assistant designed to assist HaaS F1 staff by providing prompt and accurate responses to HR-related queries.
+            </p>
+            </div>
+        </div>
+      </a>
+      <a href="https://apps.powerapps.com/play/e/4094ee47-4143-ecc6-a629-97dcefaa0949/a/c62163ae-bb8a-479a-abb1-879e44d46146?tenantId=5b973f99-77df-4beb-b27d-aa0c70b8482c&sourcetime=1717406648935&source=portal">
+        <div class="float-child" style="padding: 5px 10px 5px 5px; color: #f1f1f1; background-color: #222; border: 1px solid #d1d1d1; border-radius: 4px; height: 300px;">
+          <div class="float-container" style="width: 270px; padding: 15px 0px 0px 5px; height: 50px;">
+            <div class="float-child" style="width: 50px; padding-top: 3px;">
+              <img src="./Translate.png" style="width: 100%;">
+            </div>
+            <div class="float-child" style="width: 150px; font-weight: 500; font-size: 17px; padding-left: 10px;">
+              <p>Real-Time Manual Translation App</p>
+            </div>
+          </div>
+          <div style="padding-top: 20px; margin-left: 5px;">
+            <p style="width: 270px; padding: 20px 10px 45px 10px; background-color: #505050; border-radius: 5px;">
+              Empowering HaaS F1 engineers with the ability to instantly translate vehicle manuals from Italian to English through a simple photo capture.​
+            </p>
+            </div>
+        </div>
+      </a>
+      <a href="./HaasF1SportingRegulation.html">
+        <div class="float-child" style="padding: 5px 10px 5px 5px; color: #f1f1f1; background-color: #222; border: 1px solid #d1d1d1; border-radius: 4px; height: 300px;">
+          <div class="float-container" style="width: 270px; padding: 15px 0px 0px 5px; height: 50px;">
+            <div class="float-child" style="width: 50px; padding-top: 3px;">
+              <img src="./Regulations.png" style="width: 100%;">
+            </div>
+            <div class="float-child" style="width: 150px; font-weight: 500; font-size: 17px; padding-left: 10px;">
+              <p>AI Sporting and Technical Advisor</p>
+            </div>
+          </div>
+          <div style="padding-top: 20px; margin-left: 5px;">
+          <p style="width: 270px; padding: 20px 10px 68px 10px; background-color: #505050; border-radius: 5px;">
+            Offering drivers and engineers an AI-powered assistant for quick and accurate guidance on sporting and technical regulations.
+          </p>
+        </div>
+        </div>
+      </a>
+  </div>
+  </div>
+</div>
+</body></html>

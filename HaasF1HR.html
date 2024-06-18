@@ -30,14 +30,124 @@ h1, h2, h3{
 .hideit{
     display:none;
 }
-    </style>   
+/* The sidebar menu */
+.sidenav {
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 20%; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #e6002d; /* Black */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 0px;
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px 8px 8px 16px;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  color: #f1f1f1;
+  display: block;
+  z-index: 2;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  background-color: #ff8888;
+}
+
+#nohover {
+    background-color: #e6002d;
+}
+
+/* Style page content */
+.main {
+  margin-left: 20%; /* Same as the width of the sidebar */
+  padding: 0px 0px;
+  position: relative;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+/* The navigation menu links */
+.chatbar a {
+  padding: 8px 8px 8px 16px;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  color: #f1f1f1;
+  display: block;
+  z-index: 2;
+}
+
+/* When you mouse over the navigation links, change their color */
+.chatbar a:hover {
+  background-color: #f1f1f1;
+}
+
+#nohover {
+    background-color: #e6002d;
+}
+
+.float-container {
+    padding: 5px;
+    margin-bottom: 60px;
+    margin-top: -10px;
+}
+
+.float-child {
+    width: 42%;
+    float: left;
+    border: 2px solid;
+    border-radius: 5px;
+    margin: 3%;
+    font-size: 15px;
+    padding: 2%;
+}
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </head>
 <body>
-<h2>HR Virtual Assistant</h2>
-<div class="row">
-    
-    <div class="col-12 col-sm-8 col-md-4 col-lg-4 copilot">
+<!-- Side navigation --> 
+<div class="sidenav">
+  <a id="nohover" href="./HaasF1.html" style="margin: 10px 0px 0px -6px;">
+    <img src="HaasLogo.svg" style="width: 94%; height: auto; border: 5px solid white; border-radius: 5px; margin: 0px 0px 3% 2%; background-color: #fff;">
+</a>
+  <a href="./HaasF1.html"><img src="Home.png"  style="padding-right: 10px; width: 14%;"> Home</a>
+  <a href="./HaasF1Chat.html"><img src="Chat.png"  style="padding-right: 10px; width: 14%;"> Chat</a>
+  <a href="./HaasF1Marketplace.html"><img src="Marketplace.png"  style="padding-right: 10px; width: 14%;"> AI Marketplace</a>
+  <a href=""><img src="Notifications.png"  style="padding-right: 10px; width: 14%;"> Notifications Hub</a>
+  <a href=""><img src="About.png"  style="padding-right: 10px; width: 14%;"> About Haasistant</a>
+  <a href=""><img src="Guides&Guidelines.png"  style="padding-right: 10px; width: 14%;"> Guidance & Guidelines</a>
+  <a href=""><img src="Feedback.png"  style="padding-right: 10px; width: 14%;"> Feedback</a>
+</div>
+<div class="main">
+    <div class="col-12 col-sm-8 col-md-4 col-lg-4 copilot" style="width: 70%; height: 100%;">
     <iframe src="https://copilotstudio.microsoft.com/environments/4094ee47-4143-ecc6-a629-97dcefaa0949/bots/cr2a4_hrCopilotGeneric/webchat?__version__=2" frameborder="0" style="width: 100%; height: 100%;"></iframe>
     </div>
+    <div class="chatbar" style="background-color: #0B556A; width: 30%; height: 100%; float: left;">
+      <p style="padding: 6px 8px 8px 10px;  text-decoration: none;  font-size: 20px;  font-weight: 500;  color: #f1f1f1;  display: block;  z-index: 2; border-bottom: #f1f1f1 solid 2px;">
+        Chat History</p>
+      <input type="search" placeholder="Search" style="margin: 3% 4% 3% 4%; width: 87%;">
+      <div class="float-container">
+          <div class="float-child" style="background-color: #e6002d; color: #f1f1f1; border-color: #e6002d;">
+              <div>+ New Chat</div>
+          </div>
+          <div class="float-child" style="background-color: #f1f1f1; border-color: #f1f1f1;">
+              <div>Add Folder</div>
+          </div>
+      </div>
+      <a onmouseover="this.style.color='#000'" onmouseout="this.style.color='#F1F1F1'" style="color: #f1f1f1;">Where to find payslip</a>
+      <a onmouseover="this.style.color='#000'" onmouseout="this.style.color='#F1F1F1'" style="color: #f1f1f1;">Where to request leave</a>
+      <a onmouseover="this.style.color='#000'" onmouseout="this.style.color='#F1F1F1'" style="color: #f1f1f1;">What to do if phishing email recieved</a>
+  </div>
 </div>
 </body>
