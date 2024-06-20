@@ -1,7 +1,0 @@
-var $ = jQuery;
-
-$(function() {
-  $( "#tabs" ).tabs({
-    collapsible: true
-  });
-});
